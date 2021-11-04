@@ -1,10 +1,11 @@
 import './Expenses.css';
-import ExpenseItem from './ExpenseItem.js';
+import ExpenseItem from './ExpenseItem';
+import Card from '../UI/Card';
 
 function Expenses(props) {
   return (
-    <div className='expenses'>
-      <ExpenseItem
+    <Card className='expenses'>
+      {/* <ExpenseItem
         title={props.expenses[0].title}
         amount={props.expenses[0].amount}
         date={props.expenses[0].date}
@@ -23,8 +24,15 @@ function Expenses(props) {
         title={props.expenses[3].title}
         amount={props.expenses[3].amount}
         date={props.expenses[3].date}
-      ></ExpenseItem>
-    </div>
+      ></ExpenseItem> */}
+      {props.expenses.map((i) => (
+        <ExpenseItem
+          title={i.title}
+          amount={i.amount}
+          date={i.date}
+        ></ExpenseItem>
+      ))}
+    </Card>
   );
 }
 
