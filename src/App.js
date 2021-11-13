@@ -41,8 +41,8 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <NewExpense onAddExpense={addExpenseHandler}></NewExpense>
-        <Expenses expenses={expenses}></Expenses>
+        <NewExpense onAddExpense={addExpenseHandler} />
+        <Expenses expenses={expenses} />
       </header>
     </div>
   );
