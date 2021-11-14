@@ -7,14 +7,18 @@ import ExpenseList from './ExpenseList';
 
 function Expenses(props) {
   const { items } = props;
-  const [filteredYear, setFilteredYear] = useState('2019');
+  let filteredExpenses;
+  const [filteredYear, setFilteredYear] = useState('All');
   function filterChangeHandler(selectedYear) {
     setFilteredYear(selectedYear);
   }
-
-  const filteredExpenses = items.filter((item) => {
-    return item.date.getFullYear().toString() === filteredYear;
-  });
+  if (filteredYear === 'All') {
+    filteredExpenses = items;
+  } else {
+    filteredExpenses = items.filter((item) => {
+      return item.date.getFullYear().toString() === filteredYear;
+    });
+  }
 
   return (
     <div>
@@ -57,8 +61,7 @@ function Expenses(props) {
             ></ExpenseItem>
           ))
         )} */}
-        {/* {expenseContent} */}
-        <ExpenseList items={filteredExpenses} />
+        {<ExpenseList items={filteredExpenses} />}
       </Card>
     </div>
   );
