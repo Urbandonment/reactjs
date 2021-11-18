@@ -2,7 +2,7 @@ import React from 'react';
 import './ChartBar.css';
 
 function ChartBar(props) {
-  const { key, value, maxValue, label } = props;
+  const { value, maxValue, label } = props;
 
   let barFillHeight = '0%';
 
