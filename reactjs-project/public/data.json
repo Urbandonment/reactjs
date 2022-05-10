@@ -1,0 +1,785 @@
+{
+  "info": {
+    "_postman_id": "8cd4bbb4-1e55-40ca-94b6-a2a7f4d97e79",
+    "name": "natours",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "tours",
+      "item": [
+        {
+          "name": "Get All Tours",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzJiMDRjNTY5MmM5ZmQ4ODJiY2JlOSIsImlhdCI6MTY0NzYyMzE5MSwiZXhwIjoxNjQ3NjM3NTkxfQ.pBbQR6JpRaYbUvdplrjSvBWuHgk68vfRvgYLFd",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "url": {
+              "raw": "{{local_env}}/tours?price[gte]=2",
+              "host": ["{{local_env}}"],
+              "path": ["tours"],
+              "query": [
+                {
+                  "key": "fields",
+                  "value": "name,duration,summary,price",
+                  "disabled": true
+                },
+                {
+                  "key": "sort",
+                  "value": "-createdAt",
+                  "disabled": true
+                },
+                {
+                  "key": "duration[gte]",
+                  "value": "2",
+                  "disabled": true
+                },
+                {
+                  "key": "price[gte]",
+                  "value": "2"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Tour In Range",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzJiMDRjNTY5MmM5ZmQ4ODJiY2JlOSIsImlhdCI6MTY0NzYyMzE5MSwiZXhwIjoxNjQ3NjM3NTkxfQ.pBbQR6JpRaYbUvdplrjSvBWuHgk68vfRvgYLFd",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "url": {
+              "raw": "{{local_env}}/tours/range?unit=mi&distance=10000&long=-80.185942&lat=25.774772",
+              "host": ["{{local_env}}"],
+              "path": ["tours", "range"],
+              "query": [
+                {
+                  "key": "unit",
+                  "value": "mi"
+                },
+                {
+                  "key": "distance",
+                  "value": "10000"
+                },
+                {
+                  "key": "long",
+                  "value": "-80.185942"
+                },
+                {
+                  "key": "lat",
+                  "value": "25.774772"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Distance",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzJiMDRjNTY5MmM5ZmQ4ODJiY2JlOSIsImlhdCI6MTY0NzYyMzE5MSwiZXhwIjoxNjQ3NjM3NTkxfQ.pBbQR6JpRaYbUvdplrjSvBWuHgk68vfRvgYLFd",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "url": {
+              "raw": "{{local_env}}/tours/range?unit=mi&distance=10000&long=-80.185942&lat=25.774772",
+              "host": ["{{local_env}}"],
+              "path": ["tours", "range"],
+              "query": [
+                {
+                  "key": "unit",
+                  "value": "mi"
+                },
+                {
+                  "key": "distance",
+                  "value": "10000"
+                },
+                {
+                  "key": "long",
+                  "value": "-80.185942"
+                },
+                {
+                  "key": "lat",
+                  "value": "25.774772"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Tour",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzJiMDRjNTY5MmM5ZmQ4ODJiY2JlOSIsImlhdCI6MTY0NzYyMzE5MSwiZXhwIjoxNjQ3NjM3NTkxfQ.pBbQR6JpRaYbUvdplrjSvBWuHgk68vfRvgYLFd",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "url": {
+              "raw": "{{local_env}}/tours/5c88fa8cf4afda39709c2951/reviews",
+              "host": ["{{local_env}}"],
+              "path": ["tours", "5c88fa8cf4afda39709c2951", "reviews"],
+              "query": [
+                {
+                  "key": "fields",
+                  "value": "name,duration,summary,price",
+                  "disabled": true
+                },
+                {
+                  "key": "sort",
+                  "value": "duration,-ratings",
+                  "disabled": true
+                },
+                {
+                  "key": "duration[gte]",
+                  "value": "2",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Tour",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{local_env}}/tours/623fe5bdd605764c81b34101",
+              "host": ["{{local_env}}"],
+              "path": ["tours", "623fe5bdd605764c81b34101"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Tour",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"price\": 3123,\n    \"temp\": [\"623adc441e0548e813028e4e\"]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{local_env}}/tours/621e589ed56918cf1ce8db3f",
+              "host": ["{{local_env}}"],
+              "path": ["tours", "621e589ed56918cf1ce8db3f"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Tour",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Road the hell\",\n    \"difficulty\": \"medium\",\n    \"price\": 1,\n    \"customerEmail\": \"customer@trash-mail.com\",\n    \"rating\": 1,\n    \"imageCover\": \"test.jpge\",\n    \"description\": \"Welcome to the hell\",\n    \"maxGroupSize\": 5,\n    \"duration\":15,\n    \"ratingAverage\": 5,\n    \"guides\": [\"623adc441e0548e813028e4e\"]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{local_env}}/tours",
+              "host": ["{{local_env}}"],
+              "path": ["tours"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Stats",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{local_env}}/tours/stats",
+              "host": ["{{local_env}}"],
+              "path": ["tours", "stats"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Monthly Plan",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{local_env}}/tours/monthly-plan/2021",
+              "host": ["{{local_env}}"],
+              "path": ["tours", "monthly-plan", "2021"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "users",
+      "item": [
+        {
+          "name": "Get All Users",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{local_env}}/users?role=user",
+              "host": ["{{local_env}}"],
+              "path": ["users"],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "user"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete User",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{local_env}}/users/623596124732313b55b0b960",
+              "host": ["{{local_env}}"],
+              "path": ["users", "623596124732313b55b0b960"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Current User",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{local_env}}/users/delete-me",
+              "host": ["{{local_env}}"],
+              "path": ["users", "delete-me"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "authorizations",
+      "item": [
+        {
+          "name": "Sign Up",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.environment.set(\"token\", pm.response.json().access_token);"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"KD_admin\",\n    \"email\": \"kd_admin@trash-mail.com\",\n    \"password\": \"abcd1234\",\n    \"passwordConfirm\": \"abcd1234\",\n    \"role\":\"admin\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{local_env}}/users/sign-up",
+              "host": ["{{local_env}}"],
+              "path": ["users", "sign-up"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Sign In",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.environment.set(\"token\", pm.response.json().access_token);"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"kd_admin@trash-mail.com\",\n    \"password\": \"abcd1234\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{local_env}}/users/sign-in",
+              "host": ["{{local_env}}"],
+              "path": ["users", "sign-in"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Forgot Password",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"kd_test01@trash-mail.com\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{local_env}}/users/forgot-password",
+              "host": ["{{local_env}}"],
+              "path": ["users", "forgot-password"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Reset Password",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.environment.set(\"token\", pm.response.access_token)"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"password\":\"newpass\",\n    \"passwordConfirm\": \"newpass\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{local_env}}/users/reset-password/3361571fb1a68ab93c9c7c92868f317aab92d17e9a5a92f5e5558389963fe68a",
+              "host": ["{{local_env}}"],
+              "path": [
+                "users",
+                "reset-password",
+                "3361571fb1a68ab93c9c7c92868f317aab92d17e9a5a92f5e5558389963fe68a"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Current User",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"role\": \"admin\",\n    \"name\": \"new KD\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{local_env}}/users/update-me",
+              "host": ["{{local_env}}"],
+              "path": ["users", "update-me"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Change User Password",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"currentPassword\":\"newpass\",\n    \"password\": \"abcd1234\",\n    \"passwordConfirm\":\"abcd1234\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{local_env}}/users/update-password",
+              "host": ["{{local_env}}"],
+              "path": ["users", "update-password"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Me",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{local_env}}/users/me",
+              "host": ["{{local_env}}"],
+              "path": ["users", "me"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "reviews",
+      "item": [
+        {
+          "name": "Get All Reviews",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{local_env}}/reviews",
+              "host": ["{{local_env}}"],
+              "path": ["reviews"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Review",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"review\": \"Lack of professional\",\n    \"rating\": 1,\n    \"reviewedOn\": \"5c88fa8cf4afda39709c2951\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{local_env}}/reviews",
+              "host": ["{{local_env}}"],
+              "path": ["reviews"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Review",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{local_env}}/reviews/624dcc56ef238311297c20bb",
+              "host": ["{{local_env}}"],
+              "path": ["reviews", "624dcc56ef238311297c20bb"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Review",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{local_env}}/reviews/6246ca54559ac82926281344",
+              "host": ["{{local_env}}"],
+              "path": ["reviews", "6246ca54559ac82926281344"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Review On Nested Tour",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"review\": \"Best tour ever\",\n    \"rating\": 5\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{local_env}}/tours/1231241241/reviews",
+              "host": ["{{local_env}}"],
+              "path": ["tours", "1231241241", "reviews"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Review With Nested Tour",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzJiMDRjNTY5MmM5ZmQ4ODJiY2JlOSIsImlhdCI6MTY0NzYyMzE5MSwiZXhwIjoxNjQ3NjM3NTkxfQ.pBbQR6JpRaYbUvdplrjSvBWuHgk68vfRvgYLFd",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "url": {
+              "raw": "{{local_env}}/tours/623fe869f732d750007d896a/reviews",
+              "host": ["{{local_env}}"],
+              "path": ["tours", "623fe869f732d750007d896a", "reviews"],
+              "query": [
+                {
+                  "key": "fields",
+                  "value": "name,duration,summary,price",
+                  "disabled": true
+                },
+                {
+                  "key": "sort",
+                  "value": "duration,-ratings",
+                  "disabled": true
+                },
+                {
+                  "key": "duration[gte]",
+                  "value": "2",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Review",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"reviewedOn\": \"5c88fa8cf4afda39709c2951\",\n    \"rating\": 2\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{local_env}}/reviews/624dcc56ef238311297c20bb",
+              "host": ["{{local_env}}"],
+              "path": ["reviews", "624dcc56ef238311297c20bb"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
